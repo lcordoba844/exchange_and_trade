@@ -1,10 +1,15 @@
+import { Wallet } from "./wallet.ts"
 class User {
+    idUser:number;
     username: string;
     password: string;
+    wallet: Wallet;
 
-    constructor(username: string, pass: string) {
+    constructor(idUser:number, username: string, pass: string, wallet: Wallet) {
+        this.idUser = idUser;
         this.username = username;
         this.password = pass;
+        this.wallet= wallet;
     }
 
     getUsername(): string{
